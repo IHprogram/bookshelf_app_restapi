@@ -1,6 +1,7 @@
 from rest_framework import serializers
 # DjangoのデフォルトのUserモデルを利用
 from django.contrib.auth.models import User
+from .models import Book
 
 class UserSerializer(serializers.ModelSerializer):
 
@@ -15,3 +16,10 @@ class UserSerializer(serializers.ModelSerializer):
             # 新しくユーザーを作成(通常のserializerのcreateではパスワードが暗号化されないため)
             user = User.objects.create_user(**validated_data)
             return user
+
+class BookSerializer(serializers.ModelSerializer):
+    created_at = serializers.DateTimeField(format="%Y-%m-%d %H:%M:%S", read_only=True)
+
+    class Meta:
+        model = Book
+        fields = ('id', 'title', 'author', 'image', 'caption', 'itemUrl', 'loginUserId','created_at')
