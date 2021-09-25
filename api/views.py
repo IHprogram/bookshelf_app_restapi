@@ -1,7 +1,7 @@
 from rest_framework.permissions import AllowAny
 from rest_framework import generics
 from rest_framework import viewsets
-from .serializers import UserSerializer
+from .serializers import UserSerializer, BookSerializer
 from .models import Book
 
 class CreateUserView(generics.CreateAPIView):
