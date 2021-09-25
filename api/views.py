@@ -2,7 +2,7 @@ from rest_framework.permissions import AllowAny
 from rest_framework import generics
 from rest_framework import viewsets
 from .serializers import UserSerializer
-from .models imoport Book
+from .models import Book
 
 class CreateUserView(generics.CreateAPIView):
     serializer_class = UserSerializer
