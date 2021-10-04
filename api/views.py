@@ -18,6 +18,13 @@ class BookRetrieveView(generics.RetrieveAPIView):
     serializer_class = BookSerializer
     permission_classes = (AllowAny,)
 
-class BookViewSet(viewsets.ModelViewSet):
+class CreateBookView(generics.CreateAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
+    permission_classes = (AllowAny,)
+
+
+# 使わない？
+# class BookViewSet(viewsets.ModelViewSet):
+#     queryset = Book.objects.all()
+#     serializer_class = BookSerializer
