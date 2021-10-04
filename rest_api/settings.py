@@ -10,7 +10,10 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG')
 
 # URLを追加
-ALLOWED_HOSTS = ['bookshelf-app-restapi.herokuapp.com']
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'bookshelf-app-restapi.herokuapp.com'
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
