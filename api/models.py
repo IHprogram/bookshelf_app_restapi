@@ -6,6 +6,7 @@ class Book(models.Model):
     author = models.CharField(max_length=50)
     image = models.CharField(max_length=500)
     caption = models.CharField(max_length=500)
+    price = models.CharField(max_length=10)
     itemUrl = models.CharField(max_length=500)
     created_at = models.DateTimeField(auto_now_add=True)
 
