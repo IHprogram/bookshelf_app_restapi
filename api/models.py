@@ -7,7 +7,6 @@ class Book(models.Model):
     image = models.CharField(max_length=500)
     caption = models.CharField(max_length=500)
     itemUrl = models.CharField(max_length=500)
-    loginUserId = models.CharField(max_length=50)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
