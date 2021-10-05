@@ -11,11 +11,11 @@ class UserSerializer(serializers.ModelSerializer):
         # パスワードはwrite_only(入力できるが、readできない設定)と入力を必須にする
         extra_kwargs = {'password': {'write_only': True, 'required': True}}
 
-        def create(self, validated_data):
-            # Djangoに用意されているcreate_userメソッドを使って、
-            # 新しくユーザーを作成(通常のserializerのcreateではパスワードが暗号化されないため)
-            user = User.objects.create_user(**validated_data)
-            return user
+    def create(self, validated_data):
+        # Djangoに用意されているcreate_userメソッドを使って、
+        # 新しくユーザーを作成(通常のserializerのcreateではパスワードが暗号化されないため)
+        user = User.objects.create_user(**validated_data)
+        return user
 
 class BookSerializer(serializers.ModelSerializer):
     created_at = serializers.DateTimeField(format="%Y-%m-%d %H:%M:%S", read_only=True)
