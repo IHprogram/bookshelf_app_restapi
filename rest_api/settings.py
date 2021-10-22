@@ -12,7 +12,8 @@ DEBUG = config('DEBUG')
 # URLを追加
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'bookshelf-app-restapi.herokuapp.com'
+    'bookshelf-app-restapi.herokuapp.com',
+    'https://nextjs-bookshelf.vercel.app'
 ]
 
 INSTALLED_APPS = [
