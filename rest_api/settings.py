@@ -12,8 +12,7 @@ DEBUG = config('DEBUG')
 # URLを追加
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'bookshelf-app-restapi.herokuapp.com',
-    'https://nextjs-bookshelf.vercel.app'
+    'bookshelf-app-restapi.herokuapp.com'
 ]
 
 INSTALLED_APPS = [
@@ -42,6 +41,7 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
+    "https://nextjs-bookshelf.vercel.app"
 ]
 
 SIMPLE_JWT = {
